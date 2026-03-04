@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fondo HTML</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Consolas, monospace;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    overflow:hidden;
+    color:white;
+}
+
+/* Texto central */
+.center{
+    font-size:120px;
+    font-weight:bold;
+    text-transform:lowercase;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 20px #ff8a00;
+    }
+    to{
+        text-shadow: 0 0 40px #e52e71;
+    }
+}
+
+/* Código flotando */
+.code{
+    position:absolute;
+    font-size:18px;
+    color:#00ffcc;
+    opacity:0.2;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform: translateY(100vh);
+    }
+    to{
+        transform: translateY(-100vh);
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="center">html</div>
+
+<div class="code" style="left:10%;">&lt;!DOCTYPE html&gt;</div>
+<div class="code" style="left:25%; animation-delay:5s;">&lt;html&gt;</div>
+<div class="code" style="left:40%; animation-delay:10s;">&lt;head&gt;</div>
+<div class="code" style="left:60%; animation-delay:3s;">&lt;body&gt;</div>
+<div class="code" style="left:80%; animation-delay:8s;">&lt;/html&gt;</div>
+
+</body>
+</html>
